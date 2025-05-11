@@ -4,8 +4,7 @@ const path = require('path')
 const loger = async (req, res, next) => {
     try {
         console.log(req.method, req.url, Date.now())
-        // fs.appendFileSync()
-        console.log(__dirname)
+        fs.appendFileSync(path.join(__dirname, "logs.txt"), `${req.method} ${req.url} ${Date.now()}\n`)
         next();
         
     } catch (error) {

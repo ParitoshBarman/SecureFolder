@@ -1,5 +1,3 @@
-const authenticate = require('./authMiddleware'); 
-
 
 const authorizeRole = (...allowedRoles) => {
     return (req, res, next) => {
