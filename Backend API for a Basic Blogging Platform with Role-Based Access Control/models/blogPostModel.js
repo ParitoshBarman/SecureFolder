@@ -7,11 +7,11 @@ const blogPostSchema = new mongoose.Schema({
         unique:true
     },
     content:{
-        type:String,
+        type:String
     },
     author:{
         type:mongoose.Schema.Types.ObjectId,
-        ref:"author"
+        ref:"user"
     }
 })
 
