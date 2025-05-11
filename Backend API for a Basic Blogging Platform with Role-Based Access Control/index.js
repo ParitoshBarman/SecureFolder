@@ -8,6 +8,8 @@ app.use(express.json());
 
 
 app.get("/", (req, res)=>{
+    console.log(req);
+    
     res.send("Welcome to the server it is running");
 })
 
