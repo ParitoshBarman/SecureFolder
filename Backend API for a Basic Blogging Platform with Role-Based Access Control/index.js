@@ -8,6 +8,8 @@ const app = express();
 app.use(express.json());
 app.use(Logger);
 
+app.use("/auth", authRoutes);
+
 
 app.get("/", (req, res)=>{    
     res.send("Welcome to the server it is running");
