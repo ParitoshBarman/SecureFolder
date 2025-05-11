@@ -1,2 +1,3 @@
 Hi this first
 this is second and click test
+Now its time to auto commit
