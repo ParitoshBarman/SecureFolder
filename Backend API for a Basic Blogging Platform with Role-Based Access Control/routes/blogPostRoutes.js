@@ -5,11 +5,11 @@ const roleMiddleWare = require("../middleware/roleMiddleware")
 
 const router = express.Router()
 
-router.post("/", createBlogPost)
+router.post("/", authMiddleWare, createBlogPost)
 router.get("/", getAllBlogPosts)
 router.get("/:id", getBlogPostById)
-router.patch("/:id", updateBlogPost)
-router.delete("/:id", deleteBlogPost)
+router.patch("/:id", authMiddleWare, roleMiddleWare(["author", "admin"]), updateBlogPost)
+router.delete("/:id", authMiddleWare, roleMiddleWare(["author", "admin"]), deleteBlogPost)
 
 
 module.exports = router;
