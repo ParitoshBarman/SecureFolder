@@ -18,9 +18,6 @@ Delete Post (DELETE /posts/:id)
 3. Middleware (Custom Implementations)
 Logger Middleware: Log each request’s method, URL, and timestamp. ➤ Additionally, write the log entries to a logs.txt file using the fs module.
 
-Error Handler: Gracefully handle unknown routes and internal server errors.
-
-Validation Middleware (Bonus): Validate presence of required fields like title and content when creating or updating posts.
 
 4. Authentication & Authorization
 Implement secure user handling with JWT-based authentication.
