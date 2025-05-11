@@ -35,6 +35,8 @@ const Login = async (req, res) => {
 
         let accessToken = jwt.sign({ id: user._id, email: user.email, role: user.role }, process.env.SECRET_KEY);
         let refreshToken = jwt.sign({ id: user._id }, process.env.SECRET_KEY);
+
+        res.status(200).json({message:"User successfully login", access})
     } catch (error) {
         res.status(400).json(error);
 
