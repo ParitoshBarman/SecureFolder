@@ -1,15 +1,14 @@
 const express = require('express')
 const connectDB = require('./config/db');
-const { log } = require('console');
+const Logger = require('./middleware/loggerMiddleware')
 
 
 const app = express();
 app.use(express.json());
+app.use(Logger);
 
 
-app.get("/", (req, res)=>{
-    console.log(req);
-    
+app.get("/", (req, res)=>{    
     res.send("Welcome to the server it is running");
 })
 
