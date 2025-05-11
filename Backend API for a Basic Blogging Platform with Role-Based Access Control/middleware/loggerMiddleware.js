@@ -2,7 +2,7 @@ const fs = require('fs')
 
 const loger = async (req, res, next) => {
     try {
-        console.log()
+        console.log(req.method, req.url, Date.now)
         next();
         
     } catch (error) {
